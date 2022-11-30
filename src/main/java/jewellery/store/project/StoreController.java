@@ -151,7 +151,6 @@ public class StoreController implements Initializable {
 
     @FXML
     void addCase(MouseEvent event) {
-        System.out.println(caseNumber);
         String cT = caseType.getSelectionModel().getSelectedItem();
         String cL = caseLighting.getSelectionModel().getSelectedItem();
         String cN = String.valueOf(caseNumber);

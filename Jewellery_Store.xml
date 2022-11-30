@@ -1,0 +1,17 @@
+<object-stream>
+  <jewellery.store.project.LinkedList>
+    <actualSize>1</actualSize>
+    <head>
+      <data class="jewellery.store.project.Case">
+        <displayTrays>
+          <actualSize>0</actualSize>
+        </displayTrays>
+        <displayNumber>1</displayNumber>
+        <idNum>0</idNum>
+        <identifier></identifier>
+        <type>Wall-mounted</type>
+        <lighting>Lit</lighting>
+      </data>
+    </head>
+  </jewellery.store.project.LinkedList>
+</object-stream>

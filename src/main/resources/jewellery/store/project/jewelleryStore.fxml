@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jewellery.store.project.StoreController">
+   <tabs>
+      <Tab text="Home">
+        <content>
+          <AnchorPane fx:id="reset" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="240.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#saveSystem" prefHeight="75.0" prefWidth="150.0" text="Save">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="416.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#loadSystem" prefHeight="75.0" prefWidth="150.0" text="Load">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="235.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to my Jewellery Store">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="323.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#reset" prefHeight="70.0" prefWidth="150.0" text="Reset Store">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Add Case's">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+               <children>
+                  <Button layoutX="28.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#addCase" text="Add Case" />
+                  <ChoiceBox fx:id="caseLighting" layoutX="184.0" layoutY="38.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="caseType" layoutX="28.0" layoutY="38.0" prefWidth="150.0" />
+                  <TextField fx:id="pickCase" layoutX="31.0" layoutY="151.0" promptText="Case Number" />
+                  <Button layoutX="190.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#showCase" text="Show Case" />
+                  <ListView fx:id="caseList" layoutX="347.0" layoutY="14.0" prefHeight="125.0" prefWidth="431.0" />
+                  <Text layoutX="186.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Case Lighting" />
+                  <Text layoutX="31.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Case Type" />
+                  <ListView fx:id="showCase" layoutX="31.0" layoutY="188.0" prefHeight="167.0" prefWidth="744.0" />
+                  <Text layoutX="31.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Case to display" />
+                  <Text layoutX="277.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Case Value:" />
+                  <ListView fx:id="caseValue" layoutX="400.0" layoutY="151.0" prefHeight="25.0" prefWidth="80.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Add Tray's">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+               <children>
+                  <ChoiceBox fx:id="traySize" layoutX="24.0" layoutY="37.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="trayColour" layoutX="188.0" layoutY="37.0" prefWidth="150.0" />
+                  <Button layoutX="188.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#addTray" text="Add Tray" />
+                  <Button layoutX="131.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#showTray" text="Show Tray" />
+                  <ListView fx:id="trayList" layoutX="346.0" layoutY="16.0" prefHeight="132.0" prefWidth="421.0" />
+                  <Text layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Tray Size" />
+                  <Text layoutX="194.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Tray Colour" />
+                  <ChoiceBox fx:id="caseID" layoutX="24.0" layoutY="91.0" maxHeight="25.0" maxWidth="150.0" prefWidth="150.0" />
+                  <Text layoutX="24.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Case" />
+                  <ListView fx:id="fullTrayList" layoutX="26.0" layoutY="199.0" prefHeight="179.0" prefWidth="743.0" />
+                  <Text layoutX="26.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What tray do you want to inspect" />
+                  <ChoiceBox fx:id="trayID" layoutX="24.0" layoutY="164.0" prefHeight="25.0" prefWidth="76.0" />
+                  <Text layoutX="220.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Tray Value:" />
+                  <ListView fx:id="trayValue" layoutX="338.0" layoutY="164.0" prefHeight="25.0" prefWidth="80.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Add Jewellery">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="itemType" layoutX="30.0" layoutY="35.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="gender" layoutX="30.0" layoutY="85.0" prefWidth="150.0" />
+                  <TextField fx:id="price" layoutX="31.0" layoutY="120.0" promptText="Price" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the cost of the item" />
+                  <Text layoutX="30.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Item Type" />
+                  <Button fx:id="addJewellery" layoutX="544.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#addJewellery" text="Add Jewellery" />
+                  <TextArea fx:id="itemDescription" layoutX="200.0" layoutY="87.0" prefHeight="67.0" prefWidth="546.0" promptText="Item Description" />
+                  <Text layoutX="31.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the target Gender" />
+                  <ListView fx:id="listOfItems" layoutX="31.0" layoutY="168.0" prefHeight="166.0" prefWidth="716.0" />
+                  <ChoiceBox fx:id="caseItemID" layoutX="200.0" layoutY="35.0" maxHeight="25.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="trayItemID" layoutX="370.0" layoutY="35.0" maxHeight="25.0" onMouseEntered="#setTrayContent" prefWidth="150.0" />
+                  <Text layoutX="200.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Case" />
+                  <Text layoutX="377.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Tray" />
+                  <Button layoutX="649.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#smartAdd" text="Smart Add" />
+                  <Button layoutX="374.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#deleteItem" text="Delete" />
+                  <ChoiceBox fx:id="removeFrom" layoutX="31.0" layoutY="351.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="removeItem" layoutX="200.0" layoutY="351.0" maxHeight="25.0" onMouseEntered="#setItemContent" prefHeight="25.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Add Material">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="materialType" layoutX="28.0" layoutY="57.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="quality" layoutX="28.0" layoutY="107.0" prefWidth="150.0" />
+                  <TextField fx:id="weight" layoutX="28.0" layoutY="153.0" promptText="Weight of Item" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the cost of the item" />
+                  <Button layoutX="376.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#addMaterial" text="Add Material" />
+                  <TextArea fx:id="materialDescription" layoutX="195.0" layoutY="23.0" prefHeight="97.0" prefWidth="410.0" promptText="Material Description" />
+                  <Text layoutX="29.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Material Type" />
+                  <Text layoutX="29.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Material Quality" />
+                  <ListView fx:id="itemList" layoutX="28.0" layoutY="204.0" prefHeight="159.0" prefWidth="744.0" />
+                  <ChoiceBox fx:id="itemID" layoutX="195.0" layoutY="153.0" maxHeight="25.0" prefWidth="150.0" />
+                  <Text layoutX="195.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Item" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Stock Section">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Items of Jewellery in Stock" />
+                  <Text layoutX="374.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search for Item" />
+                  <Button layoutX="536.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#search" text="Search" />
+                  <TextField fx:id="searchBar" layoutX="371.0" layoutY="75.0" />
+                  <Button layoutX="183.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#showAll" text="Show all Items" />
+                  <ListView fx:id="stockCost" layoutX="470.0" layoutY="17.0" prefHeight="27.0" prefWidth="149.0" />
+                  <Text layoutX="367.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Stock Value:" />
+                  <TreeView fx:id="stockInfo" layoutX="14.0" layoutY="53.0" prefHeight="323.0" prefWidth="348.0" />
+                  <ListView fx:id="itemSearch" layoutX="370.0" layoutY="100.0" onMouseClicked="#displayMaterial" prefHeight="120.0" prefWidth="407.0" />
+                  <ListView fx:id="materialList" layoutX="370.0" layoutY="241.0" prefHeight="120.0" prefWidth="407.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
